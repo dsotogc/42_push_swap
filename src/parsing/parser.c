@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 13:43:50 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/15 17:22:44 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/15 18:08:53 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	ft_strcmp(const char *s1, const char *s2)
 
 static int	identify_flag(char *arg, t_context *ctx)
 {
-	if (ctx->strategy != STRAT_UNDEFINED)
+	if (ctx->strategy != STRAT_UNDEFINED && ft_strcmp(arg, "--bench") != 0)
 		return (-1);
 	else
 	{
@@ -36,6 +36,8 @@ static int	identify_flag(char *arg, t_context *ctx)
 			ctx->strategy = STRAT_SIMPLE;
 		else if (ft_strcmp(arg, "--adaptive") == 0)
 			ctx->strategy = STRAT_ADAPTIVE;
+		else if (ft_strcmp(arg, "--bench") == 0)
+			ctx->bench_mode = 1;
 		else
 			return (-1);
 	}
