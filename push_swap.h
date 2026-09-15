@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/14 16:58:26 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/15 16:45:49 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef enum e_strategy
 	STRAT_SIMPLE,
 	STRAT_MEDIUM,
 	STRAT_COMPLEX,
+	STRAT_UNDEFINED,
 }	t_strategy;
 
 typedef struct s_context
