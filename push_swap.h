@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 17:53:35 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 18:17:05 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 void	free_split(char **arr);
 int		ft_isvalid(char *n);
+int		ft_atoi(const char *n);
 size_t	ft_strlen(const char *s);
 
 #endif

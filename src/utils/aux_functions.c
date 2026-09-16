@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 16:05:59 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 16:19:44 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 18:45:16 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,29 @@ int	ft_isvalid(char *n)
 		i++;
 	}
 	return (!ft_overflows(n));
+}
+
+int	ft_atoi(const char *n)
+{
+	long	value;
+	long	sign;
+	int		i;
+
+	value = 0;
+	sign = 1;
+	i = 0;
+	if (n[i] == '+' || n[i] == '-')
+	{
+		if (n[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (n[i])
+	{
+		value = value * 10 + (n[i] - '0');
+		i++;
+	}
+	return ((int)(value * sign));
 }
 
 size_t	ft_strlen(const char *s)

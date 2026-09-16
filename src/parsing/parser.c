@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 13:43:50 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 16:31:56 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 18:43:31 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,16 @@ static int	ft_strcmp(const char *s1, const char *s2)
 
 static int	build_stack(char **arg, t_context *ctx)
 {
-	(void)ctx;
+	t_node	*node;
+
 	while (*arg)
 	{
 		if (!ft_isvalid(*arg))
 			return (-1);
-		write(1, *arg, ft_strlen(*arg));
-		write(1, "\n", 1);
+		node = stack_new_node(ft_atoi(*arg));
+		if (!node)
+			return (-1);
+		stack_add_bottom(&ctx->a, node);
 		arg++;
 	}
 	return (0);
@@ -79,6 +82,8 @@ int	parse_args(int argc, char *argv[], t_context *ctx)
 
 	ctx->strategy = STRAT_UNDEFINED;
 	ctx->bench_mode = 0;
+	stack_init(&ctx->a);
+	stack_init(&ctx->b);
 	c = 1;
 	while (c < argc)
 	{
