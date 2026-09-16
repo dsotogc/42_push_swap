@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/15 16:45:49 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 16:16:12 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ typedef struct s_context
 }	t_context;
 
 /* parsing */
-int	parse_args(int argc, char *argv[], t_context *ctx);
+int		parse_args(int argc, char *argv[], t_context *ctx);
 
 /* stack*/
 
@@ -78,5 +78,10 @@ int	parse_args(int argc, char *argv[], t_context *ctx);
 /* bench */
 
 /* utils */
+char	**ft_split(char const *s, char c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+void	free_split(char **arr);
+int		ft_isvalid(char *n);
+size_t	ft_strlen(const char *s);
 
 #endif
