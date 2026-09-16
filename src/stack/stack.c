@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/16 17:47:34 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 17:52:10 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 19:22:08 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,24 @@ void	stack_clear(t_stack *s)
 		current = next;
 	}
 	stack_init(s);
+}
+
+int	stack_has_duplicates(t_stack *s)
+{
+	t_node	*i;
+	t_node	*j;
+
+	i = s->top;
+	while (i)
+	{
+		j = i->next;
+		while (j)
+		{
+			if (i->content == j->content)
+				return (1);
+			j = j->next;
+		}
+		i = i->next;
+	}
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 13:43:50 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 18:43:31 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 19:01:21 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,7 @@ int	parse_args(int argc, char *argv[], t_context *ctx)
 			return (1);
 		c++;
 	}
+	if (stack_has_duplicates(&ctx->a))
+		return (1);
 	return (0);
 }

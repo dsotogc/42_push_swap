@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 18:17:05 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 19:01:12 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void	stack_init(t_stack *s);
 t_node	*stack_new_node(int content);
 void	stack_add_bottom(t_stack *s, t_node *node);
 void	stack_clear(t_stack *s);
+int		stack_has_duplicates(t_stack *s);
 
 /* operations */
 
