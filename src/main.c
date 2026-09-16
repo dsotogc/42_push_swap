@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 18:46:18 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/16 19:49:07 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ static void	debug_print(t_stack *s)
 	while (cur)
 	{
 		debug_putnbr(cur->content);
+		write(1, " -> idx ", 8);
+		debug_putnbr(cur->index);
 		write(1, "\n", 1);
 		cur = cur->next;
 	}
@@ -58,6 +60,7 @@ int	main(int argc, char *argv[])
 		write(2, "Error\n", 6);
 		return (1);
 	}
+	index_stack(&ctx.a);
 	debug_print(&ctx.a);
 	stack_clear(&ctx.a);
 	stack_clear(&ctx.b);

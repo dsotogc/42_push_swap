@@ -6,7 +6,7 @@
 #    By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/14 17:19:38 by dsoto-ga          #+#    #+#              #
-#    Updated: 2026/09/16 17:53:29 by dsoto-ga         ###   ########.fr        #
+#    Updated: 2026/09/16 19:49:31 by dsoto-ga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER  = push_swap.h
 SOURCES	= src/main.c \
 		src/parsing/parser.c src/utils/aux_functions.c \
 		src/utils/ft_split.c src/utils/ft_split_utils.c \
-		src/stack/stack.c
+		src/stack/stack.c src/stack/stack_utils.c
 		
 
 OBJECTS	= $(SOURCES:.c=.o)
