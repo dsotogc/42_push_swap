@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/17 15:45:27 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/17 17:42:48 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,8 @@ void	index_stack(t_stack *s);
 /* operations */
 int		push_stack(t_stack *dest, t_stack *src);
 int		swap_stack(t_stack *stack);
+int		rotate_stack(t_stack *stack);
+int	reverse_rotate_stack(t_stack *stack);
 
 /* algorithms*/
 
