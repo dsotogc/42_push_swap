@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/17 17:53:51 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/18 17:41:01 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,17 @@ void	push_stack(t_stack *dest, t_stack *src);
 void	swap_stack(t_stack *stack);
 void	rotate_stack(t_stack *stack);
 void	reverse_rotate_stack(t_stack *stack);
+void	pa(t_context *ctx);
+void	pb(t_context *ctx);
+void	sa(t_context *ctx);
+void	sb(t_context *ctx);
+void	ss(t_context *ctx);
+void	ra(t_context *ctx);
+void	rb(t_context *ctx);
+void	rr(t_context *ctx);
+void	rra(t_context *ctx);
+void	rrb(t_context *ctx);
+void	rrr(t_context *ctx);
 
 /* algorithms*/
 
