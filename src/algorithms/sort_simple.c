@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_simple.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/18 20:37:19 by dsoto-ga         ###   ########.fr       */
+/*   Created: 2026/09/18 18:05:12 by dsoto-ga          #+#    #+#             */
+/*   Updated: 2026/09/18 20:36:53 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-int	main(int argc, char *argv[])
+void	sort_simple(t_context *ctx)
 {
-	t_context	ctx;
+	t_stack	*a;
+	int		i;
+	int		j;
 
-	if (argc < 2)
-		return (0);
-	if (parse_args(argc, argv, &ctx))
+	a = &ctx->a;
+	i = 0;
+	if (a->size < 2)
+		return ;
+	while (i < a->size)
 	{
-		stack_clear(&ctx.a);
-		stack_clear(&ctx.b);
-		write(2, "Error\n", 6);
-		return (1);
+		j = 0;
+		while (j < a->size)
+		{
+			if (j < a->size - 1 && a->top->content > a->top->next->content)
+				sa(ctx);
+			ra(ctx);
+			j++;
+		}
+		i++;
 	}
-	index_stack(&ctx.a);
-	sort_simple(&ctx);
-	stack_clear(&ctx.a);
-	stack_clear(&ctx.b);
-	return (0);
 }

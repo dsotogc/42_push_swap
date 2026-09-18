@@ -6,7 +6,7 @@
 #    By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/14 17:19:38 by dsoto-ga          #+#    #+#              #
-#    Updated: 2026/09/18 17:36:55 by dsoto-ga         ###   ########.fr        #
+#    Updated: 2026/09/18 20:37:11 by dsoto-ga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SOURCES	= src/main.c \
 		src/operations/operations.c \
 		src/operations/ops_push_swap.c \
 		src/operations/ops_rotate.c \
-		src/operations/ops_reverse_rotate.c
+		src/operations/ops_reverse_rotate.c \
+		src/algorithms/sort_simple.c
 		
 
 OBJECTS	= $(SOURCES:.c=.o)

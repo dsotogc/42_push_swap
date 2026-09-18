@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/18 17:41:01 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/18 20:36:57 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ void	rrb(t_context *ctx);
 void	rrr(t_context *ctx);
 
 /* algorithms*/
+void	sort_simple(t_context *ctx);
 
 /* bench */
 
