@@ -79,10 +79,10 @@ int		stack_has_duplicates(t_stack *s);
 void	index_stack(t_stack *s);
 
 /* operations */
-int		push_stack(t_stack *dest, t_stack *src);
-int		swap_stack(t_stack *stack);
-int		rotate_stack(t_stack *stack);
-int		reverse_rotate_stack(t_stack *stack);
+void	push_stack(t_stack *dest, t_stack *src);
+void	swap_stack(t_stack *stack);
+void	rotate_stack(t_stack *stack);
+void	reverse_rotate_stack(t_stack *stack);
 
 /* algorithms*/
 

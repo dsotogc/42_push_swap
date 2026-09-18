@@ -12,56 +12,70 @@
 
 #include "../../push_swap.h"
 
-int	push_stack(t_stack *dest, t_stack *src)
+void	push_stack(t_stack *dest, t_stack *src)
 {
 	t_node	*node;
 
+	if (!src->top)
+		return ;
 	node = src->top;
-	src->top = src->top->next;
-	src->top->prev = NULL;
-	stack_add_top(dest, node);
+	src->top = node->next;
+	if (src->top)
+		src->top->prev = NULL;
+	else
+		src->bottom = NULL;
 	src->size--;
-	return (0);
+	node->next = NULL;
+	node->prev = NULL;
+	stack_add_top(dest, node);
 }
 
-int	swap_stack(t_stack *stack)
+void	swap_stack(t_stack *stack)
 {
-	t_node	*aux;
+	t_node	*a;
+	t_node	*b;
 
-	aux = stack->top->next->next;
-	aux->prev = stack->top;
-	stack->top->next->next = stack->top;
-	stack->top->next->prev = NULL;
-	stack->top->prev = stack->top->next;
-	stack->top->next = aux;
-	stack->top = stack->top->prev;
-	return (0);
+	if (stack->size < 2)
+		return ;
+	a = stack->top;
+	b = a->next;
+	a->next = b->next;
+	if (b->next)
+		b->next->prev = a;
+	else
+		stack->bottom = a;
+	b->prev = NULL;
+	b->next = a;
+	a->prev = b;
+	stack->top = b;
 }
 
-int	rotate_stack(t_stack *stack)
+void	rotate_stack(t_stack *stack)
 {
-	t_node	*aux;
+	t_node	*old_top;
 
-	aux = stack->top->next;
-	stack->bottom->next = stack->top;
-	stack->top->next = NULL;
-	stack->top->prev = stack->bottom;
-	stack->bottom = stack->top;
-	aux->prev = NULL;
-	stack->top = aux;
-	return (0);
-}
-
-int	reverse_rotate_stack(t_stack *stack)
-{
-	t_node	*aux;
-
-	aux = stack->bottom->prev;
-	stack->top->prev = stack->bottom;
-	stack->bottom->next = stack->top;
-	stack->bottom = stack->top;
+	if (stack->size < 2)
+		return ;
+	old_top = stack->top;
+	stack->top = old_top->next;
 	stack->top->prev = NULL;
-	aux->next = NULL;
-	stack->bottom = aux;
-	return (0);
+	old_top->next = NULL;
+	old_top->prev = stack->bottom;
+	stack->bottom->next = old_top;
+	stack->bottom = old_top;
+}
+
+void	reverse_rotate_stack(t_stack *stack)
+{
+	t_node	*old_bottom;
+
+	if (stack->size < 2)
+		return ;
+	old_bottom = stack->bottom;
+	stack->bottom = old_bottom->prev;
+	stack->bottom->next = NULL;
+	old_bottom->prev = NULL;
+	old_bottom->next = stack->top;
+	stack->top->prev = old_bottom;
+	stack->top = old_bottom;
 }

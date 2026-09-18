@@ -53,6 +53,8 @@ void	stack_add_top(t_stack *s, t_node *node)
 {
 	if (!s->top)
 	{
+		node->next = NULL;
+		node->prev = NULL;
 		s->top = node;
 		s->bottom = node;
 	}
