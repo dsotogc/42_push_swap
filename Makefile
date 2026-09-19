@@ -23,8 +23,11 @@ SOURCES	= src/main.c \
 		src/operations/ops_push_swap.c \
 		src/operations/ops_rotate.c \
 		src/operations/ops_reverse_rotate.c \
-		src/algorithms/sort_simple.c
-		
+		src/algorithms/sort_simple.c \
+		src/utils/print_utils.c \
+		src/bench/bench.c \
+		src/bench/bench_ops.c
+
 
 OBJECTS	= $(SOURCES:.c=.o)
 

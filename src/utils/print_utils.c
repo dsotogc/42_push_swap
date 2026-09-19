@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/19 15:17:13 by dsoto-ga         ###   ########.fr       */
+/*   Created: 2026/09/19 14:02:10 by dsoto-ga          #+#    #+#             */
+/*   Updated: 2026/09/19 15:50:20 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-int	main(int argc, char *argv[])
+void	ft_putstr_fd(char *s, int fd)
 {
-	t_context	ctx;
-
-	if (argc < 2)
-		return (0);
-	if (parse_args(argc, argv, &ctx))
+	while (*s)
 	{
-		stack_clear(&ctx.a);
-		stack_clear(&ctx.b);
-		write(2, "Error\n", 6);
-		return (1);
+		write(fd, s, 1);
+		s++;
 	}
-	index_stack(&ctx.a);
-	sort_simple(&ctx);
-	stack_clear(&ctx.a);
-	stack_clear(&ctx.b);
-	if (ctx.bench_mode)
-		print_bench(&ctx);
-	return (0);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	c;
+
+	if (n == INT_MIN)
+	{
+		ft_putstr_fd("-2147483648", fd);
+		return ;
+	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n *= -1;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
 }

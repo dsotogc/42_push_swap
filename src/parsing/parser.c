@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 13:43:50 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/16 19:01:21 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/19 16:25:56 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ int	parse_args(int argc, char *argv[], t_context *ctx)
 
 	ctx->strategy = STRAT_UNDEFINED;
 	ctx->bench_mode = 0;
+	ctx->disorder = 0;
+	ctx->ops = (t_counters){0};
 	stack_init(&ctx->a);
 	stack_init(&ctx->b);
 	c = 1;

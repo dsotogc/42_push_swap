@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/18 20:36:57 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/19 14:53:58 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ void	rrr(t_context *ctx);
 void	sort_simple(t_context *ctx);
 
 /* bench */
+void	print_bench(t_context *ctx);
+void	put_bench_ops(t_counters *o);
 
 /* utils */
 char	**ft_split(char const *s, char c);
@@ -107,5 +109,9 @@ void	free_split(char **arr);
 int		ft_isvalid(char *n);
 int		ft_atoi(const char *n);
 size_t	ft_strlen(const char *s);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
