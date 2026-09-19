@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/19 13:37:22 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/19 16:27:06 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/19 16:36:08 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,15 @@ static void	put_disorder(double disorder)
 static void	put_strategy(t_context *ctx)
 {
 	if (ctx->strategy == STRAT_SIMPLE)
-		ft_putstr_fd("Simple / O(n^2)", 2);
+		ft_putstr_fd("Simple / O(n\302\262)", 2);
 	else if (ctx->strategy == STRAT_MEDIUM)
-		ft_putstr_fd("Medium / O(n*sqrt(n))", 2);
+		ft_putstr_fd("Medium / O(n\342\210\232n)", 2);
 	else if (ctx->strategy == STRAT_COMPLEX)
 		ft_putstr_fd("Complex / O(n log n)", 2);
 	else if (ctx->disorder < 0.2)
 		ft_putstr_fd("Adaptive / O(n)", 2);
 	else if (ctx->disorder < 0.5)
-		ft_putstr_fd("Adaptive / O(n*sqrt(n))", 2);
+		ft_putstr_fd("Adaptive / O(n\342\210\232n)", 2);
 	else
 		ft_putstr_fd("Adaptive / O(n log n)", 2);
 }
