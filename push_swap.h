@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: otsrpl <otsrpl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/19 14:53:58 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/20 00:41:13 by otsrpl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void	stack_add_top(t_stack *s, t_node *node);
 void	stack_clear(t_stack *s);
 int		stack_has_duplicates(t_stack *s);
 void	index_stack(t_stack *s);
+double	compute_disorder(t_stack *s);
 
 /* operations */
 void	push_stack(t_stack *dest, t_stack *src);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: otsrpl <otsrpl@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/19 15:17:13 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/20 00:41:44 by otsrpl           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	main(int argc, char *argv[])
 		return (1);
 	}
 	index_stack(&ctx.a);
+	ctx.disorder = compute_disorder(&ctx.a);
 	sort_simple(&ctx);
 	stack_clear(&ctx.a);
 	stack_clear(&ctx.b);
