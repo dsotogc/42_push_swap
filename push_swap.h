@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otsrpl <otsrpl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: rtapiado <rtapiado@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/20 00:41:13 by otsrpl           ###   ########.fr       */
+/*   Updated: 2026/09/20 21:32:18 by rtapiado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void	rrr(t_context *ctx);
 
 /* algorithms*/
 void	sort_simple(t_context *ctx);
+void	sort_medium(t_context *ctx);
 
 /* bench */
 void	print_bench(t_context *ctx);
