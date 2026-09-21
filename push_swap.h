@@ -5,13 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by                   #+#    #+#             */
-/*   Updated: 2026/09/21 16:16:57 by dsoto-ga         ###   ########.fr       */
+/*   Created: 2026/09/21 16:51:06 by dsoto-ga          #+#    #+#             */
+/*   Updated: 2026/09/21 16:51:17 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
-
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H

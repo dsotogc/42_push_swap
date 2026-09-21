@@ -27,10 +27,13 @@ int	main(int argc, char *argv[])
 	}
 	index_stack(&ctx.a);
 	ctx.disorder = compute_disorder(&ctx.a);
-	if (ctx.strategy == STRAT_COMPLEX)
-		sort_complex(&ctx);
-	else
-		sort_simple(&ctx);
+	if (ctx.disorder != 0)
+	{
+		if (ctx.strategy == STRAT_COMPLEX)
+			sort_complex(&ctx);
+		else
+			sort_simple(&ctx);
+	}
 	stack_clear(&ctx.a);
 	stack_clear(&ctx.b);
 	if (ctx.bench_mode)
