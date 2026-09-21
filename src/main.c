@@ -6,11 +6,23 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/21 16:17:34 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:29:46 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+static void	run_strategy(t_context *ctx)
+{
+	if (ctx->strategy == STRAT_SIMPLE)
+		sort_simple(ctx);
+	else if (ctx->strategy == STRAT_MEDIUM)
+		sort_medium(ctx);
+	else if (ctx->strategy == STRAT_COMPLEX)
+		sort_complex(ctx);
+	else
+		sort_adaptive(ctx);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -28,12 +40,7 @@ int	main(int argc, char *argv[])
 	index_stack(&ctx.a);
 	ctx.disorder = compute_disorder(&ctx.a);
 	if (ctx.disorder != 0)
-	{
-		if (ctx.strategy == STRAT_COMPLEX)
-			sort_complex(&ctx);
-		else
-			sort_simple(&ctx);
-	}
+		run_strategy(&ctx);
 	stack_clear(&ctx.a);
 	stack_clear(&ctx.b);
 	if (ctx.bench_mode)

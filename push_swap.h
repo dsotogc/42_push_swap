@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:51:06 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/21 16:51:17 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:29:21 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ void	rrr(t_context *ctx);
 void	sort_simple(t_context *ctx);
 void	sort_medium(t_context *ctx);
 void	sort_complex(t_context *ctx);
+void	sort_adaptive(t_context *ctx);
 
 /* bench */
 void	print_bench(t_context *ctx);
