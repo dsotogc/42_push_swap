@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: otsrpl <otsrpl@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/23 15:35:46 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/20 00:41:44 by otsrpl           ###   ########.fr       */
+/*   Updated: 2026/09/20 19:36:05 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ int	main(int argc, char *argv[])
 	}
 	index_stack(&ctx.a);
 	ctx.disorder = compute_disorder(&ctx.a);
-	sort_simple(&ctx);
+	if (ctx.strategy == STRAT_COMPLEX)
+		sort_complex(&ctx);
+	else
+		sort_simple(&ctx);
 	stack_clear(&ctx.a);
 	stack_clear(&ctx.b);
 	if (ctx.bench_mode)
