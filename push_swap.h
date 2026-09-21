@@ -5,10 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/23 12:56:39 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/20 19:35:58 by dsoto-ga         ###   ########.fr       */
+/*   Created: Invalid date        by                   #+#    #+#             */
+/*   Updated: 2026/09/21 16:16:57 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -98,6 +101,7 @@ void	rrr(t_context *ctx);
 
 /* algorithms*/
 void	sort_simple(t_context *ctx);
+void	sort_medium(t_context *ctx);
 void	sort_complex(t_context *ctx);
 
 /* bench */

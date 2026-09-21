@@ -6,7 +6,7 @@
 #    By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/14 17:19:38 by dsoto-ga          #+#    #+#              #
-#    Updated: 2026/09/21 15:27:40 by dsoto-ga         ###   ########.fr        #
+#    Updated: 2026/09/21 16:15:28 by dsoto-ga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SOURCES	= src/main.c \
 		src/operations/ops_rotate.c \
 		src/operations/ops_reverse_rotate.c \
 		src/algorithms/sort_simple.c \
+		src/algorithms/sort_medium.c \
 		src/algorithms/sort_complex.c \
 		src/utils/print_utils.c \
 		src/bench/bench.c \
