@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/19 17:21:14 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/21 14:30:56 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/22 15:38:00 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ void	sort_complex(t_context *ctx)
 
 	if (ctx->a.size < 2)
 		return ;
-	index_stack(&ctx->a);
 	max_bits = count_bits(ctx->a.size - 1);
 	bit = 0;
 	while (bit < max_bits)
