@@ -6,7 +6,7 @@
 /*   By: dsoto-ga <dsoto-ga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:51:06 by dsoto-ga          #+#    #+#             */
-/*   Updated: 2026/09/21 17:29:21 by dsoto-ga         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:45:06 by dsoto-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,10 @@ void	sort_simple(t_context *ctx);
 void	sort_medium(t_context *ctx);
 void	sort_complex(t_context *ctx);
 void	sort_adaptive(t_context *ctx);
+void	sort_near(t_context *ctx);
+int		near_min_pos(t_stack *a);
+int		near_target_pos(t_stack *a, int value);
+void	near_rotate_to_top(t_context *ctx, int pos);
 
 /* bench */
 void	print_bench(t_context *ctx);
